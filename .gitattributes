@@ -1,2 +1,43 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+def run_quiz(questions):
+    print("INDIA GENERAL KNOWLEDGE EXAM")
+
+    print("TOTAL MARKS=15\n","EACH QUESTION CONTAINS ONE MARK")
+    score = 0
+
+    for question, options, answer in questions:
+        print(question)
+        for i, option in enumerate(options, 1):
+            print(f"{i}. {option}")
+        user_answer = int(input("Enter your answer (1, 2, 3, or 4): "))
+        if user_answer == answer:
+            print("Correct!")
+            score += 1
+        else:
+            print("Incorrect!")
+    print(f"You scored {score} out of {len(questions)}")
+
+
+quiz_questions = [("what is capital of INDIA?", ["New Delhi", "Kolkata", "Banglore", "Mumbai"], 1),
+                  ("what is national bird?", ["Pea-Hen", "parrot", "peacock", "kingfisher"], 3),
+                  ("what is national flower?", ["Rose", "sunflower", "lotus", "jasmine"], 3),
+                  ("what is national animal?", ["Lion", "Bengal Tiger", "Elephant", "Cheatah"], 2),
+                  ("which river is considered the lifeline of India?", ["Ganges", "Brahmaputra", "Yamuna", "Godavari"],
+                   1),
+                  ("Who was the first Prime Minister of India?",
+                   ["Jawaharlal Nehru", "Indira Gandhi", "Mahatma Gandhi", "Rajendra Prasad"], 1),
+                  ("Which famous monuments in India was built by Emperor Shah Jahan?",
+                   ["Qutub Minar", "Red Fort", "Taj Mahal", "Humayum's Tomb"], 3),
+                  ("Which festival is known as 'FESTIVAL OF LIGHTS' in India?",
+                   ["Diwali", "Holi", "Navaratri", "Durga Puja"], 1),
+                  ("Which Indian state is famous for its backwaters and houseboats?",
+                   ["goa", "Rajesthan", "Kerala", "Tamil Nadu"], 3),
+                  ("Who is kanown as the 'Father of Indian Constitution'?",
+                   ["B.R.Ambedkar", "Mahatma Gandhi", "Jawaharlal Nehru", "Sardhar Vallabhai Patel"], 1),
+                  ("which of this colours cannot found in Indian Flag?", ["saffron", "white", "Red", "green"], 3),
+                  ("How many states are there in India?", ["36", "29", "26", "28"], 4),
+                  ("Which country is India's largest trading partner?",
+                   ["Russia", "Germany", "United Kingdom", "United States"], 4),
+
+                  ("How many years is the term of the President of India?", ["five", "six", "four", "eight"], 1),
+                  ("How many World cups has India's Cricket Team won?", ["2", "3", "6", "none"], 2), ]
+run_quiz(quiz_questions)
